@@ -8,16 +8,16 @@ int main(int argc, char **argv)
     // Initialize objects
     street *Playground = new street;
 
-    // Handle Input
+    // Handle Input , write unscaled input map and malloc space for scaled output map
     Playground->Load_map(input_filename);
 
     Playground->Output_size(output_filename);
 
     // FOR loop RUN simulator
-    dim3 blk(32, 32);
-    dim3 grid(MAP_SIZE / 32, MAP_SIZE / 32);
+    dim3 blk(32, 32); // memory shared
+    dim3 grid(MAP_SIZE / 32, MAP_SIZE / 32); // memory can't be shared
 
-    set<<<grid, blk>>>(Playground->Dstreetmap, Playground->Dscaled_map);
+    set<<<grid, blk>>>(Playground->Dstreetmap, Playground->Dscaled_map); // set people's intital position on specific position range
 
     // test write in
 
