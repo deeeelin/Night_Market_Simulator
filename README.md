@@ -1,27 +1,28 @@
 # 🌃 Nightmarket Simulator
 
-> Simulating and analyzing human flow in crowded spaces using GPU acceleration and visualization tools.
+> **Simulating and analyzing human flow in crowded spaces using GPU acceleration and visualization tools.**
 
-![Nightmarket Simulation](./demo.gif)
+![Bending Road Simulation](./asset/curl.gif)
+![Tunnel Simulation](./asset/tunnel.gif)
 
 ---
 
 ## 🚀 Introduction
 
-In crowded events such as night markets or New Year's Eve celebrations, poor street designs often result in significant congestion and blockages. Our **Nightmarket Simulator** is designed to assess and visualize pedestrian flow under different street layouts to identify and improve crowd management efficiency.
+In bustling events like night markets or New Year's Eve celebrations, poorly designed streets can lead to severe congestion. The **Nightmarket Simulator** is a cutting-edge tool to evaluate and visualize pedestrian flow under various street layouts, aiming to enhance crowd management strategies.
 
 ### 🎯 Objective
-- Evaluate and optimize street designs by simulating human traffic flow.
-- Utilize GPU parallel computing for real-time and efficient crowd simulation.
+- **Optimize Street Designs**: Simulate human traffic flow to identify bottlenecks and improve layouts.
+- **Leverage GPU Power**: Achieve real-time, efficient simulations using parallel computing.
 
 ---
 
 ## 🛠️ Key Features
 
-- **GPU-Accelerated Simulation**: Efficient parallel processing to handle large-scale pedestrian simulations.
-- **Configurable Preferences**: Customize pedestrian behavior, such as directional preferences (e.g., 80% probability moving right).
-- **Collision Resolution**: Intelligent conflict resolution ensuring realistic pedestrian movement.
-- **Visualization Pipeline**: Clear, intuitive visualization of simulation phases and pedestrian density.
+- **🚀 GPU-Accelerated Simulation**: Harness the power of parallel processing for large-scale pedestrian simulations.
+- **🎛️ Configurable Preferences**: Tailor pedestrian behaviors, such as directional tendencies (e.g., 80% probability of moving right).
+- **🤝 Collision Resolution**: Smart algorithms ensure realistic pedestrian interactions.
+- **📊 Visualization Pipeline**: Intuitive visual outputs for analyzing simulation phases and density.
 
 ---
 
@@ -29,60 +30,60 @@ In crowded events such as night markets or New Year's Eve celebrations, poor str
 
 ### Simulation Flow:
 
-1. **Initialization**:
-   - Set pedestrians at random starting points.
+1. **🔄 Initialization**:
+   - Randomly position pedestrians at starting points.
 
-2. **Decision Phase**:
-   - Each pedestrian decides their next move based on configured directional preferences.
+2. **🧭 Decision Phase**:
+   - Pedestrians decide their next move based on directional preferences.
 
-3. **Movement Phase**:
-   - Pedestrians attempt to move to their next positions.
+3. **🚶 Movement Phase**:
+   - Pedestrians attempt to move to their chosen positions.
 
-4. **Conflict Check**:
-   - Positions with multiple pedestrians undergo a conflict resolution process, randomly selecting one pedestrian to occupy the space.
+4. **⚠️ Conflict Check**:
+   - Resolve conflicts where multiple pedestrians aim for the same spot.
 
-5. **Output Generation**:
-   - Simulation results are periodically written to binary files representing the pedestrian map.
+5. **📂 Output Generation**:
+   - Periodically save simulation results as binary pedestrian maps.
 
 ### Technical Implementation:
 
-- CUDA-based parallelism for efficient simulation.
-- GPU global memory stores pedestrian positions and updates.
-- Python visualization scripts for result analysis.
+- **CUDA Parallelism**: Efficiently simulate thousands of pedestrians.
+- **GPU Memory Management**: Store and update pedestrian positions in global memory.
+- **Python Visualization**: Analyze results with custom scripts.
 
 ---
 
 ## 🖥️ Visualization and Analysis
 
-- Visualize pedestrian flow and crowd density using heatmaps.
-- Analyze phase-to-phase pedestrian movement.
-- Quantify throughput of pedestrians exiting the simulation area.
+- **Heatmaps**: Visualize pedestrian density and flow.
+- **Phase Analysis**: Track pedestrian movements across simulation phases.
+- **Throughput Metrics**: Measure the efficiency of pedestrian exits.
 
 ---
 
 ## 📈 Performance Insights
 
-- Effective parallel computation with smooth scaling.
-- Capable of simulating thousands of pedestrians with minimal setup overhead.
-- Larger map sizes (2048+) may introduce computational overhead due to GPU resource limits.
+- **Scalability**: Smooth performance with increasing pedestrian counts.
+- **Efficiency**: Simulate thousands of pedestrians with minimal overhead.
+- **Limitations**: Larger maps (2048+) may face GPU resource constraints.
 
 ---
 
 ## 🚧 Challenges and Solutions
 
-| Challenge | Solution |
-|-----------|----------|
-| Pedestrian collision at same location | Implement directional buffers for incoming pedestrians |
-| Infinite conflict loop | Pre-decide moves to prevent recursive conflicts |
-| Determining turning directions | Predefine turn sections to simplify pedestrian navigation |
+| **Challenge**                          | **Solution**                                      |
+|----------------------------------------|--------------------------------------------------|
+| Pedestrian collisions at the same spot | Introduce directional buffers for smoother flow. |
+| Infinite conflict loops                | Predefine moves to avoid recursive conflicts.    |
+| Turning direction ambiguity            | Use predefined turn sections for clarity.        |
 
 ---
 
 ## 📝 Future Work
-- Further optimization for larger-scale simulations.
-- Enhanced real-time visualization capabilities.
+
+- **Scaling Up**: Optimize for even larger simulations.
+- **Enhanced Visualization**: Develop real-time, interactive visual tools.
 
 ---
 
-Thank you for exploring our Nightmarket Simulator! Feel free to reach out with any feedback or inquiries. 🌟
-
+Thank you for exploring the **Nightmarket Simulator**! We welcome your feedback and inquiries. 🌟
