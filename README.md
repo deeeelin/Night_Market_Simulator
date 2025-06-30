@@ -1,12 +1,11 @@
 # 🌃 Nightmarket Simulator
 
 **Simulating and analyzing human flow in crowded spaces using GPU acceleration and visualization tools.**
-
 ### 🖼️ Simulation Demos
 
 | **Bending Road Simulation** | **Tunnel Simulation** |
 |-----------------------------|-----------------------|
-| ![Bending Road Simulation](./asset/curl.gif) | ![Tunnel Simulation](./asset/tunnel.gif) |
+| <img src="./asset/curl.gif" alt="Bending Road Simulation" width="300"/> | <img src="./asset/tunnel.gif" alt="Tunnel Simulation" width="300"/> |
 
 ---
 
